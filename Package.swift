@@ -23,12 +23,12 @@ let package = Package(
                 ], linkerSettings: [
                     .unsafeFlags(["-ObjC"]),
                 ]),
-        
+
         // to generate checksum use `shasum -a 256 path/tp/my/zip` or `swift package compute-checksum path/tp/my/zip`
         .binaryTarget(name: "onnxruntime",
-                      url: "https://onnxruntimepackages.z14.web.core.windows.net/pod-archive-onnxruntime-c-1.13.1.zip",
-                      checksum: "f83c847421a6198d060af5e8535314cfe540a208552db7870b838ebc90cdaa3f"),
-        
+                      url: "https://onnxruntimepackages.z14.web.core.windows.net/pod-archive-onnxruntime-mobile-c-1.14.0.zip",
+                      checksum: "adceeb7a1c7bf434c3086d706c43bdcfcf356d53768b6e41ebad9e3fac9c3251"),
+
         .testTarget(name: "onnxTests",
                     dependencies: ["OnnxWrapper"],
                     path: "swift/onnxTests"),
